@@ -81,7 +81,7 @@ while getopts "t:a:d" OPT; do
             TYPE=$OPTARG;;
     esac
 done
-
+rm -rf /var/lib/apt/lists/lock
 if [ "${TYPE}" = "tuna" ]; then
 	apt_tuna
 elif [ "${TYPE}" = "dongbei" ]; then
